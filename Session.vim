@@ -8,14 +8,16 @@ if expand('%') == '' && !&modified && line('$') <= 1 && getline(1) == ''
 endif
 set shortmess=aoO
 badd +8 package.json
-badd +5 pages/_app.tsx
-badd +0 pages/index.tsx
-badd +4 pages/api/hello.ts
+badd +4 pages/_app.tsx
+badd +9 pages/index.tsx
+badd +6 pages/api/hello.ts
 badd +0 next-env.d.ts
+badd +0 public/vercel.svg
+badd +0 public/favicon.ico
 argglobal
 %argdel
 $argadd package.json
-edit pages/index.tsx
+edit pages/_app.tsx
 set splitbelow splitright
 wincmd _ | wincmd |
 vsplit
@@ -54,17 +56,19 @@ setlocal fdl=100
 setlocal fml=1
 setlocal fdn=20
 setlocal fen
-4
+3
 normal! zo
-let s:l = 8 - ((7 * winheight(0) + 28) / 57)
+5
+normal! zo
+let s:l = 6 - ((5 * winheight(0) + 28) / 57)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
-8
-normal! 07|
+6
+normal! 021|
 wincmd w
 argglobal
-if bufexists("pages/_app.tsx") | buffer pages/_app.tsx | else | edit pages/_app.tsx | endif
+if bufexists("pages/index.tsx") | buffer pages/index.tsx | else | edit pages/index.tsx | endif
 setlocal fdm=syntax
 setlocal fde=0
 setlocal fmr={{{,}}}
@@ -73,14 +77,15 @@ setlocal fdl=100
 setlocal fml=1
 setlocal fdn=20
 setlocal fen
-let s:l = 5 - ((4 * winheight(0) + 28) / 57)
+3
+normal! zo
+let s:l = 9 - ((8 * winheight(0) + 28) / 57)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
-5
-normal! 0
+9
+normal! 03|
 wincmd w
-2wincmd w
 exe 'vert 1resize ' . ((&columns * 50 + 102) / 204)
 exe 'vert 2resize ' . ((&columns * 76 + 102) / 204)
 exe 'vert 3resize ' . ((&columns * 76 + 102) / 204)

@@ -4,6 +4,7 @@ dependencies:
   postcss: 8.2.4
   react: 17.0.1
   react-dom: 17.0.1_react@17.0.1
+  recoil: 0.1.2_react-dom@17.0.1+react@17.0.1
   tailwindcss: 2.0.2_90874d0ac9c8f3b30e7bed02cb9a0d41
 devDependencies:
   '@types/node': 14.14.22
@@ -3366,6 +3367,22 @@ packages:
       node: '>=8.10.0'
     resolution:
       integrity: sha512-cMhu7c/8rdhkHXWsY+osBhfSy0JikwpHK/5+imo+LpeasTF8ouErHrlYkwT0++njiyuDvc7OFY5T3ukvZ8qmFQ==
+  /recoil/0.1.2_react-dom@17.0.1+react@17.0.1:
+    dependencies:
+      react: 17.0.1
+      react-dom: 17.0.1_react@17.0.1
+    dev: false
+    peerDependencies:
+      react: ^16.13.1
+      react-dom: '*'
+      react-native: '*'
+    peerDependenciesMeta:
+      react-dom:
+        optional: true
+      react-native:
+        optional: true
+    resolution:
+      integrity: sha512-hIRrHlkmW4yITlBFprVYjVPhzPKYrJKoaDrrJtAtbkMeXfXaa/XE5OlyR10n+rNfnKWNToCKb3Z4fo86IGjkzg==
   /reduce-css-calc/2.1.8:
     dependencies:
       css-unit-converter: 1.1.2
@@ -4418,5 +4435,6 @@ specifiers:
   postcss: ^8.2.4
   react: 17.0.1
   react-dom: 17.0.1
+  recoil: ^0.1.2
   tailwindcss: ^2.0.2
   typescript: ^4.1.3
